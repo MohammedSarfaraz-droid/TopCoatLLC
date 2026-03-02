@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const services = [
   { label: "Epoxy Flooring", path: "/services/epoxy-flooring" },
@@ -15,7 +16,9 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Brand */}
         <div>
-          <h3 className="text-2xl font-serif font-bold text-gradient-copper mb-4">TOPCOAT LLC</h3>
+          <Link to="/" className="inline-flex mb-4" aria-label="Topcoat LLC">
+            <img src={logo} alt="Topcoat LLC" className="h-20 w-auto" />
+          </Link>
           <p className="text-muted-foreground text-sm leading-relaxed mb-6">
             Over 20 years of craftsmanship in epoxy flooring, terrazzo, and decorative concrete.
             Luxury surfaces engineered to last.

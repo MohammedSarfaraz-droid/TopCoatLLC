@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -45,13 +46,8 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4">
-        <Link to="/" className="flex items-center gap-2">
-          <span className="text-2xl font-serif font-bold text-gradient-copper tracking-wide">
-            TOPCOAT
-          </span>
-          <span className="text-xs font-sans text-muted-foreground tracking-widest uppercase">
-            LLC
-          </span>
+        <Link to="/" className="flex items-center" aria-label="Topcoat LLC">
+          <img src={logo} alt="Topcoat LLC" className="h-24 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
